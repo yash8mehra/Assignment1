@@ -54,13 +54,13 @@ public class GradingScheme {
 
 	//calcualtes test average
         TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7;
-        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (3 / 10);
+        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (0.3);
 
 
         if (TEST_AVERAGES < 60) {
             FINAL_GRADE = TEST_AVERAGES;
         } else if ((60 <= TEST_AVERAGES) && (TEST_AVERAGES < 80)) {
-            FINAL_GRADE = ((1 - ASSIGNMENT_WEIGHT) * TEST_AVERAGES) + (ASSIGNMENT_WEIGHT * TEST_AVERAGES);
+            FINAL_GRADE = ((1 - ASSIGNMENT_WEIGHT) * TEST_AVERAGES) + (ASSIGNMENT_WEIGHT * ASSIGNMENT_AVERAGE);
         } else { //If the test averages is 80 or above
             FINAL_GRADE = (0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE) + (0.3 * ASSIGNMENT_AVERAGE);
         }
