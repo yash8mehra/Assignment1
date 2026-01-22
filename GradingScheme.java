@@ -82,8 +82,30 @@ public class GradingScheme {
 
 
 	//calculates test average
-        TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7;
-        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (0.3);
+        TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7; //E value
+        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (0.3); // W value
+        System.out.printf("Your test averages were: %.2f%n", TEST_AVERAGES, ". and your assignment weight is: %.2f%n", ASSIGNMENT_WEIGHT);
+
+
+        //get Midterm grade
+        System.out.println("Enter your midterm grade");
+        MIDTERM_GRADE = scanner.nextInt();
+
+
+       //get Final exam grade
+        System.out.println("Enter your final exam grade");
+        FINAL_EXAM_GRADE = scanner.nextInt();
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+
 
 
         if (TEST_AVERAGES < 60) {
@@ -93,7 +115,7 @@ public class GradingScheme {
         } else { //If the test averages is 80 or above
             FINAL_GRADE = (0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE) + (0.3 * ASSIGNMENT_AVERAGE);
         }
-
+        System.out.printf("Your final grade is: %.2f%n", FINAL_GRADE);
 
 
 
