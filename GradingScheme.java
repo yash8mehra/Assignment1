@@ -66,25 +66,20 @@ public class GradingScheme {
         for (int i = 0; i < NUM_ASSIGNMENTS; i++){
             ASSIGNMENT_GRADE = scanner.nextDouble(); //reads the next grade entered
             ASSIGNMENT_TOTAL += ASSIGNMENT_GRADE;
+            System.out.printf("Your ASSIGNMENT_TOTAL is: %.2f%n", ASSIGNMENT_TOTAL);
         }
         ASSIGNMENT_AVERAGE = ASSIGNMENT_TOTAL / NUM_ASSIGNMENTS; //divides total grade by 7
-        System.out.printf("Your assignment average grade is: %.2f%n" , ASSIGNMENT_AVERAGE);
+        System.out.printf("Your ASSIGNMENT_AVERAGE grade is: %.2f%n" , ASSIGNMENT_AVERAGE);
 
 
         System.out.println("Enter 7 test scores or 0 if you don't have any left");
         for (int j = 0; j < NUM_TESTS; j++){
             TEST_GRADE = scanner.nextDouble();
             TEST_TOTAL += TEST_GRADE;
+            System.out.printf("Your TEST_TOTAL is %.2f%n", TEST_TOTAL);
         }
         CLASS_TEST_AVERAGE = TEST_TOTAL / NUM_TESTS; // divides total test grades by 7
-        System.out.printf("Your in class test score average grade is: %.2f%n" , CLASS_TEST_AVERAGE);
-
-
-
-	//calculates test average
-        TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7; //E value
-        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (0.3); // W value
-        System.out.printf("Your test averages were: %.2f%n", TEST_AVERAGES, ". and your assignment weight is: %.2f%n", ASSIGNMENT_WEIGHT);
+        System.out.printf("Your CLASS_TEST_AVERAGE test score average grade is: %.2f%n" , CLASS_TEST_AVERAGE);
 
 
         //get Midterm grade
@@ -95,6 +90,14 @@ public class GradingScheme {
        //get Final exam grade
         System.out.println("Enter your final exam grade");
         FINAL_EXAM_GRADE = scanner.nextInt();
+
+
+	//calculates test average
+        TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7; //E value
+        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (0.3); // W value
+        System.out.printf("Your TEST_AVERAGES were: %.2f%n", TEST_AVERAGES, ". and your ASSIGNMENT_WEIGHT is: %.2f%n", ASSIGNMENT_WEIGHT);
+
+
 
 
         
@@ -122,7 +125,7 @@ public class GradingScheme {
 
 
 
-
+    scanner.close(); //closing scanner because inputs are no longer required
     }
 }
 
