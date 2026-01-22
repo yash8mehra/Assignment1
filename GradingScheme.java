@@ -43,13 +43,13 @@ public class GradingScheme {
 
 
         //making all the variables
-        float FINAL_GRADE; //G, The final grade
-        float ASSIGNMENT_AVERAGE; // A, the assignment test score average
-        float CLASS_TEST_AVERAGE; // T, in class test score average
-        float MIDTERM_GRADE; // M, midterm grade
-        float FINAL_EXAM_GRADE; // F, Final exam grade
-        float TEST_AVERAGES; // E, How well you did on your midterm, final, and in class tests
-        float ASSIGNMENT_WEIGHT; // W, Assignment weights
+        float FINAL_GRADE = 0.0; //G, The final grade
+        float ASSIGNMENT_AVERAGE = 0.0; // A, the assignment test score average
+        float CLASS_TEST_AVERAGE = 0.0; // T, in class test score average
+        float MIDTERM_GRADE = 0.0; // M, midterm grade
+        float FINAL_EXAM_GRADE = 0.0; // F, Final exam grade
+        float TEST_AVERAGES = 0.0; // E, How well you did on your midterm, final, and in class tests
+        float ASSIGNMENT_WEIGHT = 0.0; // W, Assignment weights
 
 
 	//calcualtes test average
@@ -58,7 +58,7 @@ public class GradingScheme {
 
 
         if (TEST_AVERAGES < 60) {
-            FINAL_GRADE = FINAL_EXAM_GRADE;
+            FINAL_GRADE = TEST_AVERAGES;
         } else if ((60 <= TEST_AVERAGES) && (TEST_AVERAGES < 80)) {
             FINAL_GRADE = ((1 - ASSIGNMENT_WEIGHT) * TEST_AVERAGES) + (ASSIGNMENT_WEIGHT * TEST_AVERAGES);
         } else { //If the test averages is 80 or above
