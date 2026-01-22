@@ -68,7 +68,7 @@ public class GradingScheme {
             ASSIGNMENT_TOTAL += ASSIGNMENT_GRADE;
         }
         ASSIGNMENT_AVERAGE = ASSIGNMENT_TOTAL / NUM_ASSIGNMENTS; //divides total grade by 7
-        System.out.println("Your assignment average grade is: " + ASSIGNMENT_AVERAGE);
+        System.out.printf("Your assignment average grade is: %.2f%n" , ASSIGNMENT_AVERAGE);
 
 
         System.out.println("Enter 7 test scores or 0 if you don't have any left");
@@ -77,7 +77,7 @@ public class GradingScheme {
             TEST_TOTAL += TEST_GRADE;
         }
         CLASS_TEST_AVERAGE = TEST_TOTAL / NUM_TESTS; // divides total test grades by 7
-        System.out.println("Your in class test score average grade is: " + CLASS_TEST_AVERAGE);
+        System.out.printf("Your in class test score average grade is: %.2f%n" , CLASS_TEST_AVERAGE);
 
 
 
