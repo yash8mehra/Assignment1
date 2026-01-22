@@ -39,7 +39,6 @@ import java.util.Scanner; //for reading in values
 
 public class GradingScheme {
     public static void main(String[] args){
-//        System.out.println("hi");
 
         //making all the variables
         double FINAL_GRADE = 0.0; //G, The final grade
@@ -49,8 +48,8 @@ public class GradingScheme {
         double FINAL_EXAM_GRADE = 0.0; // F, Final exam grade
         double TEST_AVERAGES = 0.0; // E, How well you did on your midterm, final, and in class tests
         double ASSIGNMENT_WEIGHT = 0.0; // W, Assignment weights
-        int NUM_ASSIGNMENTS = 7; // 7 assignemnts for averaging
-        int NUM_TESTS = 7; //7 in class tests
+        final int NUM_ASSIGNMENTS = 7; // 7 assignemnts for averaging
+        final int NUM_TESTS = 7; //7 in class tests
         double ASSIGNMENT_TOTAL = 0.0; // adding up all the assignment scores for averaging
         double TEST_TOTAL = 0.0; //adding up all the test scores for averaging
         double ASSIGNMENT_GRADE = 0.0; // used for adding up into assignment total
@@ -93,23 +92,19 @@ public class GradingScheme {
 
 
 	//calculates test average
-        TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7; //E value
-        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (0.3); // W value
+        TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7;
+        //in the line above, 0.4, 0.2, and 0.1 are assignment weights while 0.7 is used to bring the number up to a proper percent value
+
+        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (0.3); // W value / formula for how much the assignments weigh
         System.out.printf("Your TEST_AVERAGES were: %.2f%n", TEST_AVERAGES, ". and your ASSIGNMENT_WEIGHT is: %.2f%n", ASSIGNMENT_WEIGHT);
 
 
 
 
+        //next thing to do now is to move some of these blocks under the if blocks below
+        //if E is below 60, only calculate FINAL_EXAM_GRADE, MIDTERM_GRADE, CLASS_TEST_AVERAGE, assignments wont count
+        //elif E is between 60 and 80(not included), do all the above plus ASSIGNMENT_WEIGHT (only used here) and ASSIGNMENT_AVERAGE
         
-        
-        
-        
-        
-        
-        
-        
-
-
 
         if (TEST_AVERAGES < 60) {
             FINAL_GRADE = TEST_AVERAGES;
