@@ -68,7 +68,9 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
 ************************************************************************/
     public static void main(String[] args){
 
+
         //making all the variables
+        String name = "";
         double finalGrade = 0.0; //G, The final grade
         double assignmentAverage = 0.0; // A, the assignment test score average
         double classTestAverage = 0.0; // T, in class test score average
@@ -86,7 +88,8 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
 
         //I will now read in values for assignment averages
         Scanner scanner = new Scanner(System.in);//scanner to input values
-
+        System.out.println("Hey!! What is your name?");
+        name = scanner.nextLine(); //takes in the name
 
 
         System.out.println("Enter 7 assignment scores or 0 if u don't have any left");
@@ -95,10 +98,8 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         for (int i = 0; i < NUM_ASSIGNMENTS; i++){
             assignmentGrade = scanner.nextDouble(); //reads the next grade entered
             assignmentTotal += assignmentGrade;
-            System.out.printf("Your assignmentTotal is: %.2f%n", assignmentTotal);
         }
         assignmentAverage = assignmentTotal / NUM_ASSIGNMENTS; //divides total grade by 7
-        System.out.printf("Your assignmentAverage grade is: %.2f%n" , assignmentAverage);
 
 
         System.out.println("Enter 7 test scores or 0 if you don't have any left");
@@ -107,11 +108,8 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         for (int j = 0; j < NUM_TESTS; j++){
             testGrade = scanner.nextDouble();
             testTotal += testGrade;
-            System.out.printf("Your testTotal is %.2f%n", testTotal);
         }
         classTestAverage = testTotal / NUM_TESTS; // divides total test grades by 7
-        System.out.printf("Your classTestAverage test score average grade is: %.2f%n" , classTestAverage);
-
 
         //get Midterm grade
         System.out.println("Enter your midterm grade");
@@ -128,15 +126,9 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         //in the line above, 0.4, 0.2, and 0.1 are assignment weights while 0.7 is used to bring the number up to a proper percent value
 
         assignmentWeight = ((testAverages - 60) / 20) * (0.3); // W value / formula for how much the assignments weigh
-        System.out.printf("Your testAverages were: %.2f%n and your assignmentWeight is: %.2f%n", testAverages, assignmentWeight);
 
 
 
-
-        //next thing to do now is to move some of these blocks under the if blocks below
-        //if E is below 60, only calculate finalExamGrade, midtermGrade, classTestAverage, assignments wont count
-        //elif E is between 60 and 80(not included), do all the above plus assignmentWeight (only used here) and assignmentAverage
-        
         //this will calculate your grade if your test averages were under 60
         if (testAverages < 60) {
             finalGrade = testAverages;
@@ -145,7 +137,7 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         } else { //If the test averages is 80 or above
             finalGrade = (0.4 * finalExamGrade) + (0.2 * midtermGrade) + (0.1 * classTestAverage) + (0.3 * assignmentAverage);
         }
-        System.out.printf("Your final grade is: %.2f%n", finalGrade);
+        System.out.printf("%s, your final grade is: %.2f%n", name, finalGrade);
 
 
 
