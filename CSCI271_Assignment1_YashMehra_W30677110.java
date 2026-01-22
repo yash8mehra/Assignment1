@@ -37,7 +37,7 @@
 
 import java.util.Scanner; //for reading in values
 
-public class GradingScheme {
+public class CSCI271_Assignment1_YashMehra_W30677110 {
     public static void main(String[] args){
 
         //making all the variables
