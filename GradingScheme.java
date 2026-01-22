@@ -40,5 +40,41 @@
 public class GradingScheme {
     public static void main(String[] args){
         System.out.println("hi");
+
+
+        //making all the variables
+        float FINAL_GRADE; //G, The final grade
+        float ASSIGNMENT_AVERAGE; // A, the assignment test score average
+        float CLASS_TEST_AVERAGE; // T, in class test score average
+        float MIDTERM_GRADE; // M, midterm grade
+        float FINAL_EXAM_GRADE; // F, Final exam grade
+        float TEST_AVERAGES; // E, How well you did on your midterm, final, and in class tests
+        float ASSIGNMENT_WEIGHT; // W, Assignment weights
+
+
+	//calcualtes test average
+        TEST_AVERAGES = ((0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE)) / 0.7;
+        ASSIGNMENT_WEIGHT = ((TEST_AVERAGES - 60) / 20) * (3 / 10);
+
+
+        if (TEST_AVERAGES < 60) {
+            FINAL_GRADE = FINAL_EXAM_GRADE;
+        } else if ((60 <= TEST_AVERAGES) && (TEST_AVERAGES < 80)) {
+            FINAL_GRADE = ((1 - ASSIGNMENT_WEIGHT) * TEST_AVERAGES) + (ASSIGNMENT_WEIGHT * TEST_AVERAGES);
+        } else { //If the test averages is 80 or above
+            FINAL_GRADE = (0.4 * FINAL_EXAM_GRADE) + (0.2 * MIDTERM_GRADE) + (0.1 * CLASS_TEST_AVERAGE) + (0.3 * ASSIGNMENT_AVERAGE);
+        }
+
+
+
+
+
+
+
+
     }
 }
+
+
+
+
