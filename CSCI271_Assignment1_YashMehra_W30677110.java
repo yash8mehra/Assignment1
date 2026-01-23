@@ -88,11 +88,11 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         Scanner scanner = new Scanner(System.in);//scanner to input values
 
 
-        System.out.println("Hey!! What is your name?");
+
         name = scanner.nextLine(); //takes in the name
 
 
-        System.out.println("Enter 7 assignment scores or 0 if u don't have any left");
+
 
         //This for loop is used for adding up all of the assignment grades and then later that number is used to find the average
         for (int i = 0; i < NUM_ASSIGNMENTS; i++){
@@ -102,7 +102,7 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         assignmentAverage = assignmentTotal / NUM_ASSIGNMENTS; //divides total grade by 7
 
 
-        System.out.println("Enter 7 test scores or 0 if you don't have any left");
+        
 
         //This for loop is used for adding up all the test grades entered in and then later that number is used to find the average
         for (int j = 0; j < NUM_TESTS; j++){
@@ -112,12 +112,12 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         classTestAverage = testTotal / NUM_TESTS; // divides total test grades by 7
 
         //get Midterm grade
-        System.out.println("Enter your midterm grade");
+        
         midtermGrade = scanner.nextInt(); //takes in the midterm grade
 
 
        //get Final exam grade
-        System.out.println("Enter your final exam grade");
+        
         finalExamGrade = scanner.nextInt(); //takes in the final exam grade
 
 
