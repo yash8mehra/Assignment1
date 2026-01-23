@@ -39,8 +39,6 @@ import java.util.Scanner; //for reading in values
 
 
 
-
-
 /***************************************************************
 * Class: CSCI271_Assignment1_YashMehra_W30677110
 *
@@ -70,7 +68,7 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
 
 
         //making all the variables
-        String name = "";
+        String name = ""; // Name of the user
         double finalGrade = 0.0; //G, The final grade
         double assignmentAverage = 0.0; // A, the assignment test score average
         double classTestAverage = 0.0; // T, in class test score average
@@ -88,6 +86,8 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
 
         //I will now read in values for assignment averages
         Scanner scanner = new Scanner(System.in);//scanner to input values
+
+
         System.out.println("Hey!! What is your name?");
         name = scanner.nextLine(); //takes in the name
 
@@ -113,12 +113,12 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
 
         //get Midterm grade
         System.out.println("Enter your midterm grade");
-        midtermGrade = scanner.nextInt();
+        midtermGrade = scanner.nextInt(); //takes in the midterm grade
 
 
        //get Final exam grade
         System.out.println("Enter your final exam grade");
-        finalExamGrade = scanner.nextInt();
+        finalExamGrade = scanner.nextInt(); //takes in the final exam grade
 
 
 	//calculates test average
@@ -137,8 +137,7 @@ public class CSCI271_Assignment1_YashMehra_W30677110 {
         } else { //If the test averages is 80 or above
             finalGrade = (0.4 * finalExamGrade) + (0.2 * midtermGrade) + (0.1 * classTestAverage) + (0.3 * assignmentAverage);
         }
-        System.out.printf("%s, your final grade is: %.2f%n", name, finalGrade);
-
+        System.out.printf("%s, your final grade is: %.2f%n", name, finalGrade); // Prints the output to terminal
 
 
 
